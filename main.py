@@ -1,8 +1,8 @@
-import sys
-import io
+# main.py
+from bear import tick
+import time
 
-# Set UTF-8 encoding for Windows console
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-
-print("🧸 CryptoBear structure loaded.")
-
+if __name__ == "__main__":
+    while True:
+        print(tick())
+        time.sleep(5)   # 5-second heartbeats
