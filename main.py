@@ -5,4 +5,4 @@ import time
 if __name__ == "__main__":
     while True:
         print(tick())
-        time.sleep(5)   # 5-second heartbeats
+        time.sleep(5)

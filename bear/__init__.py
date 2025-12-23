@@ -1,6 +1,10 @@
 # bear/__init__.py
-__version__ = "0.1.0"
+import yaml, os
+from pathlib import Path
+from datetime import datetime
+
+_CONFIG_PATH = Path(__file__).parent.parent / "config" / "settings.yaml"
+config = yaml.safe_load(_CONFIG_PATH.read_text())
 
 def tick():
-    from datetime import datetime
     return f"🧸 CryptoBear tick {datetime.now():%X}"
