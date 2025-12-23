@@ -1,0 +1,11 @@
+# config/settings.yaml
+exchange: alpaca
+pair: BTCUSD # not BTC-USD
+sandbox: true # flip to false for real money (paper trading)
+grid:
+  spread: 0.005 # 0.5 % per step
+  count: 10 # 5 buy + 5 sell steps
+risk:
+  per_trade: 0.02 # 2 % of balance
+logging:
+  level: INFO # DEBUG | INFO | WARNING
