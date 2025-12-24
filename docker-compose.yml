@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  cryptobear:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cryptobear-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Mount logs directory for persistence
+      - ./logs:/app/logs
+    environment:
+      - PYTHONUNBUFFERED=1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
